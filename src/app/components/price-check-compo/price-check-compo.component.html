@@ -1,0 +1,10 @@
+<form>
+    <mat-form-field>
+      <mat-select placeholder="Select Price between" [(ngModel)]="selectedvalue" name="price_chk">
+        <mat-option *ngFor="let price_chk of price_array" [value]="price_chk.price">
+          {{price_chk.priceshow}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  
+  </form>

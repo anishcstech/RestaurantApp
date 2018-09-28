@@ -1,0 +1,12 @@
+<app-expand-compo></app-expand-compo>
+<div *ngFor="let val of listval">
+<mat-grid-list cols="4" rowHeight="3:1" >
+    <mat-grid-tile><img src="../../../assets/images/{{val.img_val}}" class="img-set"></mat-grid-tile>
+    <mat-grid-tile><h5>{{val.description}}</h5></mat-grid-tile>
+    <mat-grid-tile ><span *ngFor="let in of arrayOne(val.rating)"><i class="material-icons" >
+        star
+        </i></span></mat-grid-tile>
+    <mat-grid-tile><button mat-stroked-button color="primary">Booking</button></mat-grid-tile>
+  </mat-grid-list>
+  <hr>
+</div>

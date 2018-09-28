@@ -1,0 +1,43 @@
+<!-- <button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
+  {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
+</button> -->
+<mat-horizontal-stepper [linear]="isLinear" #stepper class="stepper">
+  <mat-step [stepControl]="firstFormGroup">
+    <form [formGroup]="firstFormGroup">
+      <ng-template matStepLabel>Login</ng-template>
+
+      <app-login-compo></app-login-compo>
+   
+      <!-- <div>
+        <button mat-button matStepperNext>Next</button>
+      </div> -->
+    </form>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+  </mat-step>
+  <mat-step [stepControl]="secondFormGroup">
+    <form [formGroup]="secondFormGroup">
+      <ng-template matStepLabel>Search Your Restaurant..</ng-template>
+      <!-- <mat-form-field>
+        <input matInput placeholder="Address" formControlName="secondCtrl" required>
+      </mat-form-field> -->
+
+
+      <app-search-category-compo></app-search-category-compo>
+      <app-search-location-compo></app-search-location-compo>
+      <!-- <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div> -->
+    </form>
+    <br><br><br><br>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>SignUp</ng-template>
+    <app-signup-compo></app-signup-compo>
+    <!-- You are now done.
+    <div>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button (click)="stepper.reset()">Reset</button>
+    </div> -->
+  </mat-step>
+</mat-horizontal-stepper>

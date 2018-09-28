@@ -1,0 +1,10 @@
+<form>
+    <mat-form-field>
+      <mat-select placeholder="Rating" [(ngModel)]="selectedValue" name="rate">
+        <mat-option *ngFor="let rate of rates" [value]="rate.rating">
+          {{rate.viewrating}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  
+  </form>

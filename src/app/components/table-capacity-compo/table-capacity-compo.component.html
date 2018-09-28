@@ -1,0 +1,10 @@
+<form>
+    <mat-form-field>
+      <mat-select placeholder="Select Capacity" [(ngModel)]="selectedValue" name="slt_seat">
+        <mat-option *ngFor="let slt_seat of seat_array" [value]="slt_seat.seatnums">
+          {{slt_seat.seatshow}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  
+  </form>
